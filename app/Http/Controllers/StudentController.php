@@ -53,16 +53,16 @@ class StudentController extends Controller
         //     'nis' => 'unique:students'
         // ]);
 
-        $newName = '';
+        // $newName = '';
 
-        if($request->file('photo')){
-            $extenion = $request->file('photo')->getClientOriginalExtension();
-        $newName = $request->name.'-'.now()->timestamp.'.'.$extenion;
-        $request->file('photo')->storeAs('photo', $newName);
-        }
+        // if($request->file('photo')){
+        //     $extenion = $request->file('photo')->getClientOriginalExtension();
+        // $newName = $request->name.'-'.now()->timestamp.'.'.$extenion;
+        // $request->file('photo')->storeAs('photo', $newName);
+        // }
 
-        $request['image'] = $newName;
-        $student = Student::create($request->all());
+        // $request['image'] = $newName;
+        // $student = Student::create($request->all());
 
         $student=Student::create($request->all());
         if($student){

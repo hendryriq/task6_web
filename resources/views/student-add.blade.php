@@ -4,7 +4,7 @@
 
 @section('content')
 {{-- {{$class}} --}}
-<h3>Add Student</h3>
+
 
 <div class="mt-5 col-8 m-auto">
    @if ($errors->any())
@@ -18,6 +18,7 @@
 @endif
 
    <form action="student" method="post" enctype="multipart/form-data">
+      <h3>Add Student</h3>
       @csrf
       <div class="mb-3">
          <label for="name">Name</label>
@@ -45,10 +46,7 @@
             @endforeach
          </select>
       </div>
-      <div class="mb-3">
-         <label for="photo" class="form-label">Foto siswa</label>
-         <input class="form-control" id="photo" name="photo" type="file" >
-       </div>
+     
 
       <div class="mb-3">
          <button class="btn btn-success">Save</button>

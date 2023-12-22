@@ -52,6 +52,11 @@
                       <span>Extracurricular</span>
                   </a>
               </li>
+              <li class="sidebar-dropdown">
+                <a href="/logout">
+                    <span>Logout</span>
+                </a>
+            </li>
 
             </ul>
         </div>
