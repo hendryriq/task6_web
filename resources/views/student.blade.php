@@ -5,8 +5,12 @@
 @section('content')
 
 <div class="my-5 d-flex justify-content-between">
+   @if(Auth::user()->role_id != 1)
+            @else
    <a class="btn btn-primary" href="student-add">Add Data</a>
+   
    <a class="btn btn-info" href="student-deleted">Show Deleted Data</a>
+   @endif
 </div>
 
 @if(Session::has('status'))

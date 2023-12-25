@@ -18,7 +18,7 @@ class MustAdminOrTeacher
     {
         //hanya admin dan teacher yang bisa melewati middleware
         if(Auth::user()->role_id !=1 && Auth::user()->role_id !=2){
-            abort(404);
+            return redirect('/students');
         }
         return $next($request);
     }

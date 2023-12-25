@@ -4,9 +4,12 @@
 
 @section('content')
 <h3>Class List</h3>
+@if(Auth::user()->role_id != 1)
+            @else
 <div class="my-5">
    <a href="" class="btn btn-primary">Add Data</a>
 </div>
+@endif
 
 <table class="table">
    <thead>

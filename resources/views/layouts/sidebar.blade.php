@@ -26,22 +26,25 @@
                 <li class="header-menu">
                     <span>General</span>
                 </li>
+                @if(Auth::user()->role_id != 1)
+            @else
                 <li class="sidebar-dropdown">
                     <a href="/">
                         <span>Dashboard</span>
                     </a>
                 </li>
+                @endif
                 <li class="sidebar-dropdown">
                     <a href="/students">
                         <span>Students</span>
                     </a>
-
                 </li>
                 <li class="sidebar-dropdown">
                     <a href="/teacher">
                         <span>Teacher</span>
                     </a>
                 </li>
+                
                 <li class="sidebar-dropdown">
                     <a href="/class">
                         <span>Class</span>

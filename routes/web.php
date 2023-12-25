@@ -56,7 +56,7 @@ Route::prefix('administrator')->group(function () {
 // })->middleware('auth');
 
 
-Route::get('/', [HomeController::class, 'index'])->name('home.index')->middleware('auth');
+Route::get('/', [HomeController::class, 'index'])->name('home.index')->middleware(['auth', 'must-admin-or-teacher']);;
 
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'authenticate']);
