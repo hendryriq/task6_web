@@ -7,7 +7,7 @@
 @if(Auth::user()->role_id != 1)
             @else
 <div class="my-5">
-   <a href="" class="btn btn-primary">Add Data</a>
+   <a href="/class-add" class="btn btn-primary">Add Data</a>
 </div>
 @endif
 

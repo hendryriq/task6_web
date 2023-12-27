@@ -105,12 +105,10 @@ class StudentController extends Controller
     public function deletedStudent(){
         $student = Student::onlyTrashed()->get();
         return view('student-deleted-list', ['student' => $student]);
-
     }
 
     public function restore($id){
         $deletedStudent = Student::withTrashed()->where('id', $id)->restore();
-
         if($deletedStudent){
             Session::flash('status', 'success');
             Session::flash('message', 'Restore student success!');

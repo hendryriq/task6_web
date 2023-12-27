@@ -7,10 +7,10 @@
 @if(Auth::user()->role_id != 1)
             @else
 <div class="my-5">
-   <a href="" class="btn btn-primary">Add Data</a>
+   <a href="/extracurricular-add" class="btn btn-primary">Add Data</a>
 </div>
 @endif
-<table class="table table-bordered">
+<table class="table table-bordered ">
    <thead>
       <tr>
          <th>#</th>
@@ -23,7 +23,8 @@
       <tr>
          <td>{{$loop->iteration}}</td>
          <td>{{$data->name}}</td>
-         <td><a class="btn btn-primary" href="extracurricular-detail/{{$data->id}}">Detail</a></td>
+         <td class=""><a class="btn btn-primary" href="extracurricular-detail/{{$data->id}}">Detail</a>
+         <a class="btn btn-danger" href="extracurricular-delete/{{$data->id}}">Delete</a></td>
       </tr>
       @endforeach
 

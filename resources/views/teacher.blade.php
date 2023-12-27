@@ -7,7 +7,8 @@
 @if(Auth::user()->role_id != 1)
             @else
 <div class="my-5">
-   <a href="" class="btn btn-primary">Add Data</a>
+   <a href="/teacher-add" class="btn btn-primary">Add Data</a>
+   <a class="btn btn-info" href="teacher-deleted">Show Deleted Data</a>
 </div>
 @endif
 
@@ -29,10 +30,9 @@
          <td>{{$data->name}}</td>
          @if(Auth::user()->role_id != 1)
             @else
-         <td><a class="btn btn-primary" href="student/{{$data->id}}">Detail</a></td>
+         <td><a class="btn btn-primary" href="teacher/{{$data->id}}">Detail</a>
+            <a class="btn btn-danger" href="teacher-delete/{{$data->id}}">Delete</a></td>
          @endif
-
-         
       </tr>
       @endforeach
 

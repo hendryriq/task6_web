@@ -13,5 +13,9 @@ class Extracurricular extends Model
     {
         return $this->belongsToMany(Student::class, 'student_extracurricular', 'student_id', 'extracurricular_id');
     }
+
+    protected $fillable = [
+        'name'
+    ];
     
 }
